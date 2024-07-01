@@ -18,7 +18,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # ojo que lo que se copia es el interior de mi carpeta local billionApp y no la carpeta en sí, ya que en el container ya está creada la carpeta billionApp
 # esto quedaría en el container como billionApp/src   
 # como en un paso anterior ya se copió el requirements.txt en esta última copia se excluye
-COPY billionApp/ .
+COPY . .
 
 # Expone el puerto en el que Flask correrá
 EXPOSE 8080
