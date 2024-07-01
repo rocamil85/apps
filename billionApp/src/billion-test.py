@@ -9,7 +9,7 @@ def process_data():
     file_name = 'World_Billionaire_2024.csv'
     file_path = f'gs://bucket_billion/{file_name}'
 
-    # Leer el archivo directamente desde GCS2
+    # Leer el archivo directamente desde GCS4
     df = pd.read_csv(file_path)
     df_cleaned = df.dropna()
 
