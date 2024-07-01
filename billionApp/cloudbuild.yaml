@@ -3,7 +3,7 @@ options:
 
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'us-central1-docker.pkg.dev/elevated-watch-427517-u1/my-repo/my_app', '.']
+    args: ['build', '-t', 'us-central1-docker.pkg.dev/elevated-watch-427517-u1/my-repo/my_app', '-f', 'billionApp/Dockerfile', '.']
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'us-central1-docker.pkg.dev/elevated-watch-427517-u1/my-repo/my_app']
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
