@@ -3,11 +3,11 @@ options:
 
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'us-west1-docker.pkg.dev/elevated-watch-427517-u1/billion-artifact-registry/my_app_billion', '.']
+    args: ['build', '-t', 'us-central1-docker.pkg.dev/elevated-watch-427517-u1/my-repo/my_app', '.']
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'us-central1-docker.pkg.dev/elevated-watch-427517-u1/billion-artifact-registry/my_app_billion']
+    args: ['push', 'us-central1-docker.pkg.dev/elevated-watch-427517-u1/my-repo/my_app']
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: gcloud
-    args: ['run', 'deploy', 'my-app', '--image', 'us-central1-docker.pkg.dev/elevated-watch-427517-u1/billion-artifact-registry/my_app_billion', '--region', 'us-central1', '--platform', 'managed', '--allow-unauthenticated']
+    args: ['run', 'deploy', 'my-app', '--image', 'us-central1-docker.pkg.dev/elevated-watch-427517-u1/my-repo/my_app', '--region', 'us-central1', '--platform', 'managed', '--allow-unauthenticated']
 images:
-  - 'us-central1-docker.pkg.dev/elevated-watch-427517-u1/billion-artifact-registry/my_app_billion'
+  - 'us-central1-docker.pkg.dev/elevated-watch-427517-u1/my-repo/my_app'
