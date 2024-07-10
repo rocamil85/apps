@@ -4,6 +4,7 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
+#comentario
 @app.route('/')
 def process_data():
     file_name = 'World_Billionaire_2024.csv'
