@@ -4,6 +4,7 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
+# Ejemplo de app Flask que feue desarrollada en la Shell y por tanto no tiene credenciales
 @app.route('/')
 def process_data():
     file_name = 'World_Billionaire_2024.csv'
